@@ -1,0 +1,72 @@
+{
+  "analysis_type": "DDoS Attack Example",
+  "sample": {
+    "sample_index": 11,
+    "WHAT": {
+      "predicted_classification": "DDoS",
+      "true_classification": "DDoS",
+      "confidence_percent": 99.98162078857422,
+      "correct_prediction": true
+    },
+    "WHY": {
+      "explanation": "Top 5 features influencing this classification",
+      "key_features": [
+        {
+          "feature": "act_data_pkt_fwd",
+          "value": 4.0,
+          "shap_value": -1.5795331001281738,
+          "impact": "negative"
+        },
+        {
+          "feature": "Destination Port",
+          "value": 80.0,
+          "shap_value": -1.137149691581726,
+          "impact": "negative"
+        },
+        {
+          "feature": "min_seg_size_forward",
+          "value": 20.0,
+          "shap_value": -1.0787593126296997,
+          "impact": "negative"
+        },
+        {
+          "feature": "Bwd Packet Length Mean",
+          "value": 0.0,
+          "shap_value": -0.4003646671772003,
+          "impact": "negative"
+        },
+        {
+          "feature": "Fwd Packet Length Max",
+          "value": 6.0,
+          "shap_value": 0.3012138605117798,
+          "impact": "positive"
+        }
+      ]
+    },
+    "HOW": {
+      "attack_mechanism": {
+        "protocol": 0,
+        "flow_duration": 10563735.0,
+        "total_packets": 5.0,
+        "packet_rate": 0.473317439,
+        "avg_packet_size": 7.2
+      },
+      "description": "Attack characterized by protocol 0 with packet rate and flow patterns"
+    },
+    "WHEN": {
+      "flow_duration_ms": 10563735.0,
+      "flow_IAT_mean": 2640933.75,
+      "note": "Exact timestamp not available in processed features"
+    },
+    "WHERE": {
+      "destination_port": 80,
+      "source_port": "Not available in processed features",
+      "note": "IP addresses removed during preprocessing for privacy"
+    },
+    "WHO": {
+      "attack_type": "DDoS",
+      "sophistication": "high",
+      "note": "Source IP analysis not available in processed features"
+    }
+  }
+}
